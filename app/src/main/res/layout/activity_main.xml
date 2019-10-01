@@ -20,5 +20,11 @@
         android:text="Now see if git doesn't break!"
         android:textAlignment="center"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test 2"
+        android:textAlignment="center"/>
+
 
 </LinearLayout>
