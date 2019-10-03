@@ -43,6 +43,7 @@
         android:background="@drawable/circle"
         android:text="Proceed to Drink Menu"
         android:textAlignment="center"
+        android:onClick="nextPage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:layout_editor_absoluteX="16dp" />
