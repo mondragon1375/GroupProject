@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".DrinksMenuActivity"></activity>
+        <activity android:name=".KidsMenuActivity"></activity>
+        <activity android:name=".AdultsMenuActivity"></activity>
+        <activity android:name=".DessertsMenuActivity"></activity>
+        <activity android:name=".CalculateBillActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
