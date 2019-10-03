@@ -1,26 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:background="@color/coolblue"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="105dp"
+        android:layout_marginBottom="41dp"
         android:text="Restaurant"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:textColor="@color/yellowdark"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="To order items from this restaurant you will first be given a drink menu and will order items from this list.
-        Then you hit next to go to the kids menu and order items here. You will do the same thing for the adult and dessert menu.
-        Once you are done with the dessert menu you will press the calculate bill button"
-        android:textAlignment="center"/>
+        android:layout_marginTop="105dp"
+        android:layout_marginBottom="106dp"
+        android:text="To order items from this restaurant you will first be given a drink menu and will order items from this list. Then you hit next to go to the kids menu and order items here. You will do the same thing for the adult and dessert menu. Once you are done with the dessert menu you will press the calculate bill button."
+        android:textAlignment="center"
+        android:textColor="@color/yellowdark"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="158dp"
+        android:layout_marginBottom="321dp"
+        android:background="@drawable/circle"
+        android:text="Proceed to Drink Menu"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="16dp" />
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
