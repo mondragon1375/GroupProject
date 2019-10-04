@@ -5,4 +5,11 @@
     <color name="colorAccent">#D81B60</color>
     <color name="coolblue">#078CF7</color>
     <color name="yellowdark">#D8A206</color>
+
+    <!-- Color codes for menu mode -->
+    <color name="colorPrimary2">#078CF7</color>
+    <color name="colorPrimaryDark2">#3F51B5</color>
+    <color name="colorAccent2">#54D6F0</color>
+    <color name="colorGrey">#666B6B</color>
+    <color name="colorTint">#A196DBF1</color>
 </resources>
