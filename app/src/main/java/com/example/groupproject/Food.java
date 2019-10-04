@@ -2,21 +2,18 @@ package com.example.groupproject;
 
 public class Food {
     private String foodName;
-    private String description;
     private double price;
-    private int imageResourceID;
+    private double discountprice;
+    //private int imageResourceID;
 
-    public Food(String foodName, String description, double price, int imageResourceID){
+    public Food(String foodName, double price, double discountprice){
         this.foodName = foodName;
-        this.description = description;
         this.price = price;
-        this.imageResourceID = imageResourceID;
+        this.discountprice = discountprice;
     }
 
     public static final Food[] drinksFood = {
-            new Food("Sample Food", "Sample Description", 3.99, R.drawable.circle),
-            new Food("Pancakes", "3 pancakes, choice of meat, potato", 7.99, R.drawable.circle)
-    };
+            new Food("Cola"
 
     public String toString(){
         return foodName;
