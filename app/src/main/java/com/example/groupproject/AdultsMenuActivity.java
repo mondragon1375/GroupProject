@@ -1,4 +1,15 @@
 package com.example.groupproject;
 
-public class AdultsMenuActivity {
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class AdultsMenuActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_adults_menu);
+    }
+
+
 }
