@@ -15,12 +15,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="textViewSettings">
-        <item name="android:background">@color/colorPrimary</item>
-        <item name="android:textColor">@color/colorGrey</item>
-        <item name="android:padding">@dimen/editTextPadding</item>
-        <item name="android:layout_width">@dimen/editTextWidth</item>
-        <item name="android:layout_height">@dimen/editTextHeight</item>
+    <style name="textMessageSettings">
+        <item name="android:padding">@dimen/textViewPadding</item>
+        <item name="android:layout_width">@dimen/textViewWidthMax</item>
+        <item name="android:layout_height">@dimen/textViewHeightMax</item>
+        <item name="android:textAlignment">center</item>
     </style>
 
     <style name="AppThemeDark" parent="Theme.AppCompat.DayNight.DarkActionBar">

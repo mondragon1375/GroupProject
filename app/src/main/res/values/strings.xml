@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">GroupProject</string>
+    <string name="message_intro">To order items from this restaurant you will first be given a drink
+        menu and will order items from this list. Then you hit next to go to the kids menu and order
+        items here. You will do the same thing for the adult and dessert menu. Once you are done
+        with the dessert menu you will press the calculate bill button.</string>
+
 </resources>

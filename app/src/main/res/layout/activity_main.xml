@@ -9,44 +9,39 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="105dp"
-        android:layout_marginBottom="41dp"
+        android:layout_marginTop="80dp"
         android:text="Restaurant"
         android:textAlignment="center"
         android:textColor="@color/yellowdark"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="105dp"
-        android:layout_marginBottom="106dp"
-        android:text="To order items from this restaurant you will first be given a drink menu and will order items from this list. Then you hit next to go to the kids menu and order items here. You will do the same thing for the adult and dessert menu. Once you are done with the dessert menu you will press the calculate bill button."
-        android:textAlignment="center"
+        android:id="@+id/textView2"
+        style="@style/textMessageSettings"
+        android:layout_marginTop="80dp"
+        android:text="@string/message_intro"
         android:textColor="@color/yellowdark"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="158dp"
-        android:layout_marginBottom="321dp"
+        android:layout_marginTop="120dp"
         android:background="@drawable/circle"
+        android:onClick="nextPage"
         android:text="Proceed to Drink Menu"
         android:textAlignment="center"
-        android:onClick="nextPage"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
