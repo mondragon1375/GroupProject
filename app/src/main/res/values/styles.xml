@@ -15,4 +15,18 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="textViewSettings">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:padding">@dimen/editTextPadding</item>
+        <item name="android:layout_width">@dimen/editTextWidth</item>
+        <item name="android:layout_height">@dimen/editTextHeight</item>
+    </style>
+
+    <style name="AppThemeDark" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/fontsizeM</item>
+    </style>
+
+
 </resources>

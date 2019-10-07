@@ -2,31 +2,35 @@ package com.example.groupproject;
 
 public class Food {
     private String foodName;
-    private String description;
     private double price;
+    private double discountprice;
+    private static final double DISCOUNT = 0.2;
+
     //private int imageResourceID;
 
-    public Food(String foodName, String description, double price){
+    public Food(String foodName, double price, double discountprice){
         this.foodName = foodName;
-        this.description = description;
         this.price = price;
-        //this.imageResourceID = imageResourceID;
+        this.discountprice = discountprice;
     }
 
     public static final Food[] drinksFood = {
-            new Food("Sample Food", "Sample Description", 3.99)
+            new Food("Cola", 2.25, DISCOUNT * 2.25),
+            new Food("Pepsi", 2.25, DISCOUNT * 2.25),
+            new Food("Sprite", 2.25, DISCOUNT * 2.25),
+            new Food("Root Beer", 2.25, DISCOUNT * 2.25),
+            new Food("Ginger Ale", 2.25, DISCOUNT * 2.25),
+            new Food("Iced Tea", 2.25, DISCOUNT * 2.25),
+            new Food("Lemonade", 2.25, DISCOUNT * 2.25),
+
     };
 
     public String toString(){ return foodName; }
 
     public String getFoodName() { return foodName; }
 
-    public String getDescription() { return description; }
-
     public double getPrice() { return price; }
 
     public void setPrice(double price) { this.price = price; }
-
-    //public int getImageResourceID() { return imageResourceID;}
 
 }
