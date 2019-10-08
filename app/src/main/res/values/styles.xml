@@ -13,13 +13,15 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/yellowdark</item>
+        <item name="android:textSize">@dimen/fontsizeS</item>
     </style>
 
     <style name="textMessageSettings">
+        <item name="android:textAlignment">center</item>
         <item name="android:padding">@dimen/textViewPadding</item>
         <item name="android:layout_width">@dimen/textViewWidthMax</item>
         <item name="android:layout_height">@dimen/textViewHeightMax</item>
-        <item name="android:textAlignment">center</item>
     </style>
 
     <style name="AppThemeDark" parent="Theme.AppCompat.DayNight.DarkActionBar">
