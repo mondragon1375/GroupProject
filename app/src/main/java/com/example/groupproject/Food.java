@@ -21,8 +21,7 @@ public class Food {
             new Food("Root Beer", 2.25, DISCOUNT * 2.25),
             new Food("Ginger Ale", 2.25, DISCOUNT * 2.25),
             new Food("Iced Tea", 1.75, DISCOUNT * 1.75),
-            new Food("Lemonade", 2.00, DISCOUNT * 2.00),
-
+            new Food("Lemonade", 2.00, DISCOUNT * 2.00)
     };
 
     public static final Food[] kidsMenu = {
@@ -48,6 +47,13 @@ public class Food {
             new Food("Filet Mignon", 19.95, DISCOUNT * 19.95),
             new Food("Deep-Dish Pizza", 16.75, DISCOUNT * 16.75),
             new Food("Taco Salad", 11.75, DISCOUNT * 11.75)
+    };
+
+    public static final Food[] dessertMenu = {
+            new Food("Tiramisu", 6.50, DISCOUNT * 6.50),
+            new Food("Caramel Ice Cream", 2.50, DISCOUNT * 2.50),
+            new Food("Churros", 4.75, DISCOUNT * 4.75),
+            new Food("Chocolate Lava Cake ", 8.25, DISCOUNT * 8.25)
     };
     
     public String toString(){ return foodName; }
