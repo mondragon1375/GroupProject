@@ -10,34 +10,21 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="Restaurant"
-        android:textAlignment="center"
-        android:textColor="@color/yellowdark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        style="@style/textTitle"
+        android:text="@string/restaurant_name" />
 
     <TextView
         android:id="@+id/textView2"
-        style="@style/textMessageSettings"
-        android:text="@string/message_intro"
-        android:layout_marginTop="80dp"/>
+        style="@style/textMessage"
+        android:layout_marginTop="80dp"
+        android:text="@string/message_intro" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:background="@drawable/circle"
+        style="@style/buttonProceed"
+        android:layout_marginTop="80dp"
         android:onClick="nextPage"
-        android:text="Proceed to Drink Menu"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        android:text="@string/string_proceed_drinks" />
 
 
 </LinearLayout>

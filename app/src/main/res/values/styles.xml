@@ -14,20 +14,29 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColor">@color/yellowdark</item>
-        <item name="android:textSize">@dimen/fontsizeS</item>
+        <item name="android:layout_margin">@dimen/defaultMargin</item>
     </style>
 
-    <style name="textMessageSettings">
+    <style name="textMessage">
         <item name="android:textAlignment">center</item>
-        <item name="android:padding">@dimen/textViewPadding</item>
-        <item name="android:layout_width">@dimen/textViewWidthMax</item>
-        <item name="android:layout_height">@dimen/textViewHeightMax</item>
+        <item name="android:textSize">@dimen/fontsize1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="AppThemeDark" parent="Theme.AppCompat.DayNight.DarkActionBar">
-        <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:textSize">@dimen/fontsizeM</item>
+    <style name="textTitle">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/fontsize3</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="buttonProceed">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/fontsize1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/customButtonH</item>
+        <item name="android:background">@drawable/circle</item>
+    </style>
 
 </resources>

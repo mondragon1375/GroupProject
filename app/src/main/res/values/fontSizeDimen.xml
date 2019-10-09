@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="fontsizeS">16sp</dimen>
-    <dimen name="fontsizeM">40sp</dimen>
-    <dimen name="fontsizeL">60sp</dimen>
+    <dimen name="fontsize1">16sp</dimen>
+    <dimen name="fontsize2">24sp</dimen>
+    <dimen name="fontsize3">32sp</dimen>
 </resources>
