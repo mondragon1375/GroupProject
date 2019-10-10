@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 
 public class DrinksMenuActivity extends AppCompatActivity {
@@ -17,7 +18,7 @@ public class DrinksMenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_drinks_menu);
         Intent intent = getIntent();
 
-        ArrayAdapter<Food> listAdapter = new ArrayAdapter<>(
+        final ArrayAdapter<Food> listAdapter = new ArrayAdapter<>(
                 this, android.R.layout.simple_list_item_1, Food.drinksFood);
 
         ListView listFoods = (ListView) findViewById(R.id.list_drinkChoices);
@@ -28,6 +29,7 @@ public class DrinksMenuActivity extends AppCompatActivity {
                 new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> listFoods,
                                             View itemView, int position, long id) {
+                        EditText fooditem = (EditText) findViewById(R.id.dish);
 
 
 

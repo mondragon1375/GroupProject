@@ -16,15 +16,22 @@
     <ListView
         android:id="@+id/list_drinkChoices"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="389dp">
+    </ListView>
 
     <EditText
         android:id="@+id/dish"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter the name of the item"
+        android:hint="Enter the name of the item"
         android:textAlignment="center"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="27dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm item by adding it to cart" />
 
 </LinearLayout>
