@@ -5,7 +5,8 @@
 
     <dimen name="customButtonH">70dp</dimen>
 
-    <dimen name="defaultMargin">15dp</dimen>
+    <dimen name="defaultPadding">25dp</dimen>
+    <dimen name="defaultMargin">30dp</dimen>
 
     <dimen name="textViewPadding">30dp</dimen>
 </resources>

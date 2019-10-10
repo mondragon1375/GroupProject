@@ -9,17 +9,23 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="MenuChoosing" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Restaurant_AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColor">@color/yellowdark</item>
-        <item name="android:layout_margin">@dimen/defaultMargin</item>
+        <item name="android:textSize">@dimen/fontsize1</item>
+    </style>
+
+    <style name="Restaurant_Layout" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:padding">@dimen/defaultPadding</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
     </style>
 
     <style name="textMessage">
         <item name="android:textAlignment">center</item>
-        <item name="android:textSize">@dimen/fontsize1</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
@@ -33,7 +39,6 @@
 
     <style name="buttonProceed">
         <item name="android:textAlignment">center</item>
-        <item name="android:textSize">@dimen/fontsize1</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/customButtonH</item>
         <item name="android:background">@drawable/circle</item>
