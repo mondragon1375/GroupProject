@@ -14,9 +14,17 @@
         tools:layout_editor_absoluteY="27dp" />
 
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/list_drinkChoices"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <EditText
+        android:id="@+id/dish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter the name of the item"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="27dp" />
 
 </LinearLayout>
