@@ -3,13 +3,13 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="coolblue">#078CF7</color>
-    <color name="yellowdark">#D8A206</color>
+
+    <color name="textColor">#D8A206</color>
+    <color name="colorGrey">#666B6B</color>
+    <color name="colorTint">#A1108FCC</color>
 
     <!-- Color codes for menu mode -->
     <color name="colorPrimary2">#078CF7</color>
-    <color name="colorPrimaryDark2">#3F51B5</color>
+    <color name="colorPrimaryDark2">#4459E9</color>
     <color name="colorAccent2">#54D6F0</color>
-    <color name="colorGrey">#666B6B</color>
-    <color name="colorTint">#A196DBF1</color>
 </resources>
