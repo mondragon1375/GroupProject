@@ -2,6 +2,7 @@ package com.example.groupproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class DrinksMenuActivity extends AppCompatActivity {
 
@@ -30,9 +32,20 @@ public class DrinksMenuActivity extends AppCompatActivity {
                     public void onItemClick(AdapterView<?> listFoods,
                                             View itemView, int position, long id) {
                         EditText fooditem = (EditText) findViewById(R.id.dish);
+                        String[] calamari = new String[7];
+
+                        //for(int i = 0; i <= position; i++)
+                            int i = position;
+                        calamari[i] = Food.drinksFood[i].getFoodName();
 
 
+                        Context context = getApplicationContext();
+                        int duration = Toast.LENGTH_SHORT;
 
+                        Toast toast = Toast.makeText(context, calamari[i], duration);
+                        toast.show();
+
+                        fooditem.setText(calamari[i]);
                         // Pass the Food name the user clicks on to BreakfastChoicesActivity
                     }
                 };
@@ -40,6 +53,11 @@ public class DrinksMenuActivity extends AppCompatActivity {
         listFoods.setOnItemClickListener(itemClickListener);
 
 
+    }
+
+    public void nextPage(View v) {
+        Intent intent = new Intent(this, DrinksMenuActivity.class);
+        startActivity(intent);
     }
 
     }
