@@ -24,5 +24,4 @@
         android:onClick="nextPage"
         android:text="@string/string_proceed_drinks" />
 
-
 </LinearLayout>
