@@ -55,8 +55,8 @@ public class DrinksMenuActivity extends AppCompatActivity {
 
     }
 
-    public void nextPage(View v) {
-        Intent intent = new Intent(this, DrinksMenuActivity.class);
+    public void goToKidsMenu(View v) {
+        Intent intent = new Intent(this, KidsMenuActivity.class);
         startActivity(intent);
     }
 

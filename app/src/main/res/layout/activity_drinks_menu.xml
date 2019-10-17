@@ -28,4 +28,10 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="27dp" />
 
+    <Button
+        android:id="@+id/button"
+        style="@style/buttonProceed"
+        android:layout_marginTop="80dp"
+        android:onClick="nextPage" />
+
 </LinearLayout>
