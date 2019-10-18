@@ -1,38 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    style="@style/Restaurant_Layout">
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Drinks Menu"
-        android:textAlignment="center"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="27dp" />
+        style="@style/textTitle"
+        android:text="Drinks Menu"/>
 
     <ListView
         android:id="@+id/list_drinkChoices"
         android:layout_width="match_parent"
-        android:layout_height="378dp" />
+        android:layout_height="300dp"
+        android:layout_marginTop="30dp" />
 
     <EditText
         android:id="@+id/drink"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enter the name of the item"
-        android:textAlignment="center"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="27dp" />
+        style="@style/textEdit"
+        android:hint="Enter the name of the item"
+        android:layout_marginTop="20dp"/>
 
     <Button
         android:id="@+id/button2"
+        style="@style/buttonProceed"
         android:onClick="goToKidsMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Confirm item and go to kids menu" />
+        android:text="Confirm item and go to kids menu"
+        android:layout_marginTop="30dp"/>
 
 </LinearLayout>
