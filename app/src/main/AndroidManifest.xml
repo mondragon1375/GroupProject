@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Restaurant_AppTheme">
         <activity android:name=".DrinksMenuActivity"></activity>
         <activity android:name=".KidsMenuActivity"></activity>
         <activity android:name=".AdultsMenuActivity"></activity>

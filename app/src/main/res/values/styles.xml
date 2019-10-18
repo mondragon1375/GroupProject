@@ -22,7 +22,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:background">@color/colorTint</item>
+        <item name="android:background">@drawable/gradient</item>
     </style>
 
     <style name="textMessage">
@@ -34,6 +34,13 @@
     <style name="textTitle">
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">@dimen/fontsize3</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="textEdit">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/fontsize2</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
