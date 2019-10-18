@@ -31,7 +31,7 @@ public class DrinksMenuActivity extends AppCompatActivity {
                 new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> listFoods,
                                             View itemView, int position, long id) {
-                        EditText fooditem = (EditText) findViewById(R.id.dish);
+                        EditText fooditem = (EditText) findViewById(R.id.drink);
                         String[] calamari = new String[7];
 
                         //for(int i = 0; i <= position; i++)

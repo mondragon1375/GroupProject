@@ -17,10 +17,10 @@
     <ListView
         android:id="@+id/list_drinkChoices"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="378dp" />
 
     <EditText
-        android:id="@+id/dish"
+        android:id="@+id/drink"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Enter the name of the item"
@@ -29,9 +29,10 @@
         tools:layout_editor_absoluteY="27dp" />
 
     <Button
-        android:id="@+id/button"
-        style="@style/buttonProceed"
-        android:layout_marginTop="80dp"
-        android:onClick="nextPage" />
+        android:id="@+id/button2"
+        android:onClick="goToKidsMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm item and go to kids menu" />
 
 </LinearLayout>
