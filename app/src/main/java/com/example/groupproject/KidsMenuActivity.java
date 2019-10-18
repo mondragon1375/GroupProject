@@ -32,7 +32,7 @@ public class KidsMenuActivity extends AppCompatActivity {
                     public void onItemClick(AdapterView<?> listFoods,
                                             View itemView, int position, long id) {
                         EditText fooditem = (EditText) findViewById(R.id.kidsItem);
-                        String[] kidsFood = new String[8];
+                        String[] kidsFood = new String[11];
 
                         //for(int i = 0; i <= position; i++)
                         int i = position;

@@ -38,7 +38,6 @@ public class Food {
     public static final Food[] adultsMenu = {
             new Food("Loaded Nachos", 7.85, DISCOUNT * 7.85),
             new Food("Buffalo Chicken Bites", 6.75, DISCOUNT * 6.75),
-            new Food("Chips and Guacomole", 5.25, DISCOUNT * 5.25),
             new Food("Avocado Egg Rolls", 10.25, DISCOUNT * 10.25),
             new Food("Mozarella Flat Bread", 9.45, DISCOUNT * 9.45),
             new Food("Linguine with Alfredo", 13.75, DISCOUNT * 13.75),

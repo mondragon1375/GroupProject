@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Adult Menu" />
+
+    <ListView
+        android:id="@+id/list_adultChoices"
+        android:layout_width="match_parent"
+        android:layout_height="378dp" />
+
+    <EditText
+        android:id="@+id/adultsItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter the name of the item"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="27dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:onClick="goToDessertMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to Dessert Menu" />
 
 </LinearLayout>
