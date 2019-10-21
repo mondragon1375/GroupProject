@@ -14,8 +14,7 @@
         <activity android:name=".AdultsMenuActivity"></activity>
         <activity android:name=".DessertsMenuActivity"></activity>
         <activity android:name=".CalculateBillActivity"></activity>
-        <activity android:name=".MainActivity"
-            android:theme="@style/Restaurant_AppTheme">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

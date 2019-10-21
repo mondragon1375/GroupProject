@@ -44,6 +44,12 @@
         <item name="android:textSize">@dimen/fontsize2</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">@string/edit_text_string</item>
+    </style>
+
+    <style name="viewList">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/listViewHeight</item>
     </style>
 
     <style name="buttonProceed">

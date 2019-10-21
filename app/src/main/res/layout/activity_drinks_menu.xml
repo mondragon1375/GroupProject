@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Restaurant_Layout">
 
@@ -10,21 +11,19 @@
 
     <ListView
         android:id="@+id/list_drinkChoices"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
+        style="@style/viewList"
         android:layout_marginTop="30dp" />
 
     <EditText
         android:id="@+id/drink"
         style="@style/textEdit"
-        android:hint="Enter the name of the item"
         android:layout_marginTop="20dp"/>
 
     <Button
         android:id="@+id/button2"
         style="@style/buttonProceed"
         android:onClick="goToKidsMenu"
-        android:text="Confirm item and go to kids menu"
+        android:text="Go to Kids Menu"
         android:layout_marginTop="30dp"/>
 
 </LinearLayout>

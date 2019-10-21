@@ -10,4 +10,6 @@
 
     <string name="string_proceed_drinks">Proceed to Drinks Menu</string>
 
+    <string name="edit_text_string">Enter the name of the item</string>
+
 </resources>
