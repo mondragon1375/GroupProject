@@ -24,9 +24,11 @@
     <Button
         android:id="@+id/button"
         style="@style/buttonProceed"
+        android:layout_marginBottom="44dp"
         android:onClick="nextPage"
         android:text="@string/string_proceed_drinks"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
