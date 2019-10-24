@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class DrinksMenuActivity extends AppCompatActivity {
@@ -31,21 +32,29 @@ public class DrinksMenuActivity extends AppCompatActivity {
                 new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> listFoods,
                                             View itemView, int position, long id) {
-                        EditText fooditem = (EditText) findViewById(R.id.drink);
-                        String[] calamari = new String[7];
+                        TextView fooditem = (TextView) findViewById(R.id.drink);
+                        TextView costofitem = (TextView) findViewById(R.id.cost);
+
+                        String[] drink = new String[7];
+                        Double[] cost = new Double[7];
 
                         //for(int i = 0; i <= position; i++)
-                            int i = position;
-                        calamari[i] = Food.drinksFood[i].getFoodName();
+                        int i = position;
+                        drink[i] = Food.drinksFood[i].getFoodName();
+                        cost[i] = Food.drinksFood[i].getPrice();
+
+                        String costString = Double.toString(cost[i]);
+
 
 
                         Context context = getApplicationContext();
                         int duration = Toast.LENGTH_SHORT;
 
-                        Toast toast = Toast.makeText(context, calamari[i], duration);
+                        Toast toast = Toast.makeText(context, drink[i], duration);
                         toast.show();
 
-                        fooditem.setText(calamari[i]);
+                        fooditem.setText(drink[i]);
+                        costofitem.setText(costString);
                         // Pass the Food name the user clicks on to BreakfastChoicesActivity
                     }
                 };
