@@ -15,17 +15,17 @@
         style="@style/viewList"
         android:layout_marginTop="30dp" />
 
-    <EditText
+    <TextView
         android:id="@+id/drink"
         style="@style/textEdit"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="30dp"
+        android:text="Click on a drink" />
 
     <TextView
         android:id="@+id/cost"
-        style="@style/textMessage"
-        android:layout_width="284dp"
-        android:layout_height="54dp"
-        android:text="TextView" />
+        style="@style/textEdit"
+        android:layout_marginTop="30dp"
+        android:text="Cost of  drink" />
 
     <Button
         android:id="@+id/button2"
