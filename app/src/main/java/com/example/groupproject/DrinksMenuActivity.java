@@ -13,7 +13,16 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class DrinksMenuActivity extends AppCompatActivity {
+
+    ArrayList<Food> allDrinks = new ArrayList<Food>();
+    Food[] item = new Food[7];
+    int i;
+
+    TextView fooditem = (TextView) findViewById(R.id.drink);
+    TextView costofitem = (TextView) findViewById(R.id.cost);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,16 +41,15 @@ public class DrinksMenuActivity extends AppCompatActivity {
                 new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> listFoods,
                                             View itemView, int position, long id) {
-                        TextView fooditem = (TextView) findViewById(R.id.drink);
-                        TextView costofitem = (TextView) findViewById(R.id.cost);
 
                         String[] drink = new String[7];
                         Double[] cost = new Double[7];
 
                         //for(int i = 0; i <= position; i++)
-                        int i = position;
+                        i = position;
                         drink[i] = Food.drinksFood[i].getFoodName();
                         cost[i] = Food.drinksFood[i].getPrice();
+                        item[i] = Food.drinksFood[i];
 
                         String costString = Double.toString(cost[i]);
 
@@ -64,8 +72,19 @@ public class DrinksMenuActivity extends AppCompatActivity {
 
     }
 
+    String fooditemstring = fooditem.getText().toString();
+    String costofitemstring = costofitem.getText().toString();
+
     public void goToKidsMenu(View v) {
         Intent intent = new Intent(this, KidsMenuActivity.class);
+        startActivity(intent);
+    }
+
+    public void addItem(View v) {
+        allDrinks.add(item[i]);
+        Intent intent = new Intent(this, CalculateBillActivity.class);
+        intent.putExtra(CalculateBillActivity.NAME, fooditemstring);
+        intent.putExtra(CalculateBillActivity.COST, costofitemstring);
         startActivity(intent);
     }
 
