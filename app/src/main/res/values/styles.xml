@@ -15,13 +15,13 @@
         <item name="colorAccent">@color/colorAccent2</item>
         <item name="android:textColor">@color/textColor</item>
         <item name="android:textSize">@dimen/fontsize1</item>
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
     </style>
 
     <style name="Restaurant_Layout" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:padding">@dimen/defaultPadding</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:orientation">vertical</item>
         <item name="android:background">@drawable/gradient</item>
     </style>
 
@@ -57,6 +57,13 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/customButtonH</item>
         <item name="android:background">@drawable/circle</item>
+    </style>
+
+    <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
     </style>
 
 </resources>

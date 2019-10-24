@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,19 +9,24 @@
     <TextView
         android:id="@+id/textView1"
         style="@style/textTitle"
-        android:text="@string/restaurant_name" />
+        android:text="@string/restaurant_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/textView2"
         style="@style/textMessage"
-        android:layout_marginTop="60dp"
-        android:text="@string/message_intro" />
+        android:text="@string/message_intro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <Button
         android:id="@+id/button"
         style="@style/buttonProceed"
-        android:layout_marginTop="80dp"
         android:onClick="nextPage"
-        android:text="@string/string_proceed_drinks" />
+        android:text="@string/string_proceed_drinks"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+// resources https://codinginflow.com/tutorials/android/slide-animation-between-activities
 public class MainActivity extends AppCompatActivity {
 
     @Override
