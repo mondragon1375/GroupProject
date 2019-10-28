@@ -3,31 +3,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Restaurant_Layout"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".DrinksMenuActivity">
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/addtoBill"
         style="@style/buttonProceed"
         android:layout_width="150dp"
         android:layout_height="70dp"
-        android:onClick="goToKidsMenu"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="34dp"
+        android:onClick="onClickAddButton"
         android:text="add to bill"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/cost" />
 
-    <TextView
-        android:id="@+id/textView4"
-        style="@style/textTitle"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="25dp"
-        android:text="Drinks Menu"
-        app:layout_constraintBottom_toTopOf="@+id/list_drinkChoices"
-        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/button2"
+        style="@style/buttonProceed"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="200dp"
+        android:onClick="goToKidsMenu"
+        android:text="Proceed to\nKids Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ListView
         android:id="@+id/list_drinkChoices"
         style="@style/viewList"
-        android:layout_height="250dp"
+        android:layout_width="176dp"
+        android:layout_height="194dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="25dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,19 +53,28 @@
         style="@style/textEdit"
         android:layout_marginStart="25dp"
         android:layout_marginTop="35dp"
-        android:text="Cost of  drink"
+        android:text="Cost of drink"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/drink" />
 
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/textTitle"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="25dp"
+        android:text="Drinks Menu"
+        app:layout_constraintBottom_toTopOf="@+id/list_drinkChoices"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/viewBill"
         style="@style/buttonProceed"
-        android:layout_width="150dp"
+        android:layout_width="141dp"
         android:layout_height="70dp"
-        android:layout_marginBottom="61dp"
-        android:onClick="goToKidsMenu"
-        android:text="Proceed to\nKids Menu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginStart="216dp"
+        android:text="View Bill"
+        android:onClick="onClickViewButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addtoBill" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
