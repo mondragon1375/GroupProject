@@ -2,7 +2,8 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/Restaurant_Layout">
+    style="@style/Restaurant_Layout"
+    tools:context=".KidsMenuActivity">
 
     <TextView
         android:id="@+id/textView4"
