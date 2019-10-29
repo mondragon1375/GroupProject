@@ -23,8 +23,9 @@
     <Button
         android:id="@+id/button3"
         style="@style/buttonProceed"
+        android:layout_width="358dp"
+        android:layout_marginTop="30dp"
         android:onClick="goToAdultMenu"
-        android:text="Go to Adults Menu"
-        android:layout_marginTop="30dp"/>
+        android:text="Go to Adults Menu" />
 
 </LinearLayout>

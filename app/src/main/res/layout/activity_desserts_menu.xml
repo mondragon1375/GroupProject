@@ -3,10 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/Restaurant_Layout"
     tools:context=".DessertsMenuActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        style="@style/textTitle"
+        android:layout_width="365dp"
         android:layout_height="wrap_content"
         android:text="Dessert Menu" />
 
@@ -26,6 +28,7 @@
 
     <Button
         android:id="@+id/button4"
+        style="@style/buttonProceed"
         android:onClick="goToBill"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -11,70 +11,66 @@
         style="@style/buttonProceed"
         android:layout_width="150dp"
         android:layout_height="70dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="34dp"
         android:onClick="onClickAddButton"
         android:text="add to bill"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cost" />
+        app:layout_constraintBottom_toBottomOf="@+id/viewBill"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button2"
         style="@style/buttonProceed"
         android:layout_width="150dp"
         android:layout_height="70dp"
-        android:layout_marginBottom="200dp"
         android:onClick="goToKidsMenu"
         android:text="Proceed to\nKids Menu"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ListView
         android:id="@+id/list_drinkChoices"
         style="@style/viewList"
-        android:layout_width="176dp"
-        android:layout_height="194dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="25dp"
+        android:layout_width="363dp"
+        android:layout_height="245dp"
+        app:layout_constraintBottom_toTopOf="@+id/drink"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/drink"
         style="@style/textEdit"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginBottom="32dp"
         android:text="Click on a drink"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/list_drinkChoices" />
+        app:layout_constraintBottom_toTopOf="@+id/cost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/cost"
         style="@style/textEdit"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginBottom="96dp"
         android:text="Cost of drink"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/drink" />
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
         style="@style/textTitle"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="25dp"
         android:text="Drinks Menu"
-        app:layout_constraintBottom_toTopOf="@+id/list_drinkChoices"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/viewBill"
         style="@style/buttonProceed"
         android:layout_width="141dp"
         android:layout_height="70dp"
-        android:layout_marginStart="216dp"
-        android:text="View Bill"
         android:onClick="onClickViewButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addtoBill" />
+        android:text="View Bill"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

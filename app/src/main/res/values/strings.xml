@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">GroupProject</string>
 
-    <string name="restaurant_name">InsertNameHere</string>
+    <string name="restaurant_name">Restruante de Franko</string>
 
     <string name="message_intro">To order items from this restaurant you will first be given a drink
         menu and will order items from this list. Then you hit next to go to the kids menu and order
