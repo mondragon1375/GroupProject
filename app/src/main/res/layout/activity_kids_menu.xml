@@ -13,12 +13,22 @@
     <ListView
         android:id="@+id/list_kidsChoices"
         style="@style/viewList"
-        android:layout_marginTop="30dp"/>
+        android:layout_width="wrap_content"
+        android:layout_height="205dp"
+        android:layout_marginTop="30dp" />
 
-    <EditText
+    <TextView
+        android:id="@+id/textView"
+        style="@style/textEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click on a drink" />
+
+    <TextView
         android:id="@+id/kidsItem"
         style="@style/textEdit"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="Cost of drink"/>
 
     <Button
         android:id="@+id/button3"
@@ -27,5 +37,19 @@
         android:layout_marginTop="30dp"
         android:onClick="goToAdultMenu"
         android:text="Go to Adults Menu" />
+
+    <Button
+        android:id="@+id/button5"
+        style="@style/buttonProceed"
+        android:layout_width="356dp"
+        android:layout_height="62dp"
+        android:text="Add to bill" />
+
+    <Button
+        android:id="@+id/button6"
+        style="@style/buttonProceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Bill" />
 
 </LinearLayout>
