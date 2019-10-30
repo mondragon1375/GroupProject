@@ -2,7 +2,6 @@ package com.example.groupproject;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -12,7 +11,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String TAG = "DatabaseHelper";
     private static final String DB_NAME = "bill";
     private static final String TABLE_NAME = "run_table";
-    private static final String COL0 = "_id";        // unique ID for each element
+    private static final String COL0 = "_id";
     private static final String COL1 = "FOODNAME";
     private static final String COL2 = "FOODCOST";
 
@@ -22,28 +21,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
-        String createTable = "CREATE TABLE " + TABLE_NAME + " (" + COL0 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + COL1 + " TEXT, "
+        String createTable = "CREATE TABLE " + TABLE_NAME + " (" + COL0
+                + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COL1 + " TEXT, "
                 + COL2 + " TEXT); ";
-
         Log.d(TAG, "onCreate: " + createTable);
-
         db.execSQL(createTable);
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
-        // show them how picky syntax is!!!  If even one space is missing query won't work!
         onCreate(db);
     }
 
     public boolean addData(String foodName, String foodCost) {
-        // This will get an object tor the database
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        //this will help us write to the database.  Think of put as putting this element into this column of db
-        ContentValues contentValues = new ContentValues();
+        SQLiteDatabase db = this.getWritableDatabase();         // This will get an object tor the database
+        ContentValues contentValues = new ContentValues();      // This will help us write to the database
         contentValues.put(COL1, foodName);
         contentValues.put(COL2, foodCost);
 

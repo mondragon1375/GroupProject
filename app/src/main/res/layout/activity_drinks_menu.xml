@@ -6,26 +6,12 @@
     android:orientation="vertical"
     tools:context=".DrinksMenuActivity">
 
-    <Button
-        android:id="@+id/addtoBill"
-        style="@style/buttonProceed"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        android:onClick="onClickAddButton"
-        android:text="add to bill"
-        app:layout_constraintBottom_toBottomOf="@+id/viewBill"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button2"
-        style="@style/buttonProceed"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        android:onClick="goToKidsMenu"
-        android:text="Proceed to\nKids Menu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/textTitle"
+        android:text="Drinks Menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/list_drinkChoices"
@@ -56,21 +42,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView4"
-        style="@style/textTitle"
-        android:text="Drinks Menu"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/addtoBill"
+        style="@style/buttonProceed"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:onClick="onClickAddButton"
+        android:text="add to bill"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBill"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/viewBill"
         style="@style/buttonProceed"
-        android:layout_width="141dp"
+        android:layout_width="140dp"
         android:layout_height="70dp"
         android:onClick="onClickViewButton"
         android:text="View Bill"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/buttonProceed"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:onClick="goToKidsMenu"
+        android:text="Proceed to\nKids Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
