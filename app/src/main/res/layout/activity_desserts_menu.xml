@@ -1,37 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
     style="@style/Restaurant_Layout"
     tools:context=".DessertsMenuActivity">
 
     <TextView
+        android:id="@+id/textView4"
         style="@style/textTitle"
-        android:layout_width="365dp"
-        android:layout_height="wrap_content"
-        android:text="Dessert Menu" />
+        android:text="Dessert Menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/list_dessertChoices"
-        android:layout_width="match_parent"
-        android:layout_height="378dp" />
+        android:id="@+id/list_dessertsChoices"
+        style="@style/viewList"
+        android:layout_width="wrap_content"
+        android:layout_height="205dp"
+        app:layout_constraintBottom_toTopOf="@+id/dessertsItemName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <EditText
-        android:id="@+id/dessertItem"
+    <TextView
+        android:id="@+id/dessertsItemName"
+        style="@style/textEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter the name of the item"
-        android:textAlignment="center"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="27dp" />
+        android:layout_marginBottom="8dp"
+        android:text="Click on an item"
+        app:layout_constraintBottom_toTopOf="@+id/dessertsItemCost"
+        tools:layout_editor_absoluteX="25dp" />
+
+    <TextView
+        android:id="@+id/dessertsItemCost"
+        style="@style/textEdit"
+        android:layout_marginBottom="20dp"
+        android:text="Cost of item"
+        app:layout_constraintBottom_toTopOf="@+id/addtoBill"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/button3"
         style="@style/buttonProceed"
-        android:onClick="goToBill"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Go to Bill" />
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:text="Go to Adults Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/addtoBill"
+        style="@style/buttonProceed"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:text="Add to bill"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBill"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/viewBill"
+        style="@style/buttonProceed"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:text="View Bill"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

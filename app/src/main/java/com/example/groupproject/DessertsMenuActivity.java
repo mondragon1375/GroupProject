@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class DessertsMenuActivity extends AppCompatActivity {
@@ -23,7 +24,7 @@ public class DessertsMenuActivity extends AppCompatActivity {
         final ArrayAdapter<Food> listAdapter = new ArrayAdapter<>(
                 this, android.R.layout.simple_list_item_1, Food.dessertMenu);
 
-        ListView listFoods = (ListView) findViewById(R.id.list_dessertChoices);
+        ListView listFoods = (ListView) findViewById(R.id.list_dessertsChoices);
         listFoods.setAdapter(listAdapter);
 
         // Create a listener to listen for when a Food item is clicked on
@@ -31,7 +32,7 @@ public class DessertsMenuActivity extends AppCompatActivity {
                 new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> listFoods,
                                             View itemView, int position, long id) {
-                        EditText fooditem = (EditText) findViewById(R.id.dessertItem);
+                        TextView fooditem = (TextView) findViewById(R.id.dessertsItemName);
                         String[] dessertFood = new String[10];
 
                         //for(int i = 0; i <= position; i++)

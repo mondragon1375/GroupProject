@@ -19,27 +19,27 @@
         style="@style/viewList"
         android:layout_width="wrap_content"
         android:layout_height="205dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/kidsItemName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/kidsItemName"
         style="@style/textEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Click on a drink"
-        app:layout_constraintBottom_toTopOf="@+id/kidsItem"
+        android:text="Click on an item"
+        app:layout_constraintBottom_toTopOf="@+id/kidsItemCost"
         tools:layout_editor_absoluteX="25dp" />
 
     <TextView
-        android:id="@+id/kidsItem"
+        android:id="@+id/kidsItemCost"
         style="@style/textEdit"
         android:layout_marginBottom="20dp"
-        android:text="Cost of drink"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
+        android:text="Cost of item"
+        app:layout_constraintBottom_toTopOf="@+id/addtoBill"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -55,19 +55,21 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/addtoBill"
         style="@style/buttonProceed"
         android:layout_width="140dp"
         android:layout_height="70dp"
+        android:onClick="onClickAddButton"
         android:text="Add to bill"
-        app:layout_constraintBottom_toBottomOf="@+id/button6"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBill"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/viewBill"
         style="@style/buttonProceed"
         android:layout_width="140dp"
         android:layout_height="70dp"
+        android:onClick="onClickViewButton"
         android:text="View Bill"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent" />
