@@ -56,6 +56,7 @@ public class AdultsMenuActivity extends AppCompatActivity {
                         //for(int i = 0; i <= position; i++)
                         int i = position;
                         adultFood[i] = Food.adultsMenu[i].getFoodName();
+                        cost[i] = Food.adultsMenu[i].getPrice();
 
                         String costString = Double.toString(cost[i]);
 

@@ -54,7 +54,7 @@ public class KidsMenuActivity extends AppCompatActivity {
                         //for(int i = 0; i <= position; i++)
                         int i = position;
                         kidsFood[i] = Food.kidsMenu[i].getFoodName();
-                        cost[i] = Food.drinksFood[i].getPrice();
+                        cost[i] = Food.kidsMenu[i].getPrice();
 
                         String costString = Double.toString(cost[i]);
 

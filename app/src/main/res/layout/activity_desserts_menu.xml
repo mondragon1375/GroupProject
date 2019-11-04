@@ -48,7 +48,8 @@
         style="@style/buttonProceed"
         android:layout_width="140dp"
         android:layout_height="70dp"
-        android:text="Go to Adults Menu"
+        android:text="Go to Bill"
+        android:onClick = "goToBill"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -58,6 +59,7 @@
         style="@style/buttonProceed"
         android:layout_width="140dp"
         android:layout_height="70dp"
+        android:onClick="onClickAddButton"
         android:text="Add to bill"
         app:layout_constraintBottom_toBottomOf="@+id/viewBill"
         app:layout_constraintStart_toStartOf="parent" />
@@ -67,6 +69,7 @@
         style="@style/buttonProceed"
         android:layout_width="140dp"
         android:layout_height="70dp"
+        android:onClick="onClickViewButton"
         android:text="View Bill"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent" />
