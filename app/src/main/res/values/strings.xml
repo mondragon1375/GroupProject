@@ -8,7 +8,13 @@
         items here. You will do the same thing for the adult and dessert menu. Once you are done
         with the dessert menu you will press the calculate bill button.</string>
 
-    <string name="string_proceed_drinks">"Proceed to\nDrinks Menu"</string>
+    <string name="string_proceed_drinks">"Drinks Menu"</string>
+
+    <string name="string_proceed_adults">"Adults Menu"</string>
+
+    <string name="string_proceed_desserts">"Desserts Menu"</string>
+
+    <string name="string_proceed_kids">"Kids Menu"</string>
 
     <string name="edit_text_string">Enter the name of the item</string>
 

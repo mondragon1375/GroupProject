@@ -128,8 +128,8 @@ public class KidsMenuActivity extends AppCompatActivity {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
-    public void goToAdultMenu(View v) {
-        Intent intent = new Intent(this, AdultsMenuActivity.class);
+    public void goHome(View v) {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 

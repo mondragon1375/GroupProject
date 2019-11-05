@@ -16,19 +16,56 @@
     <TextView
         android:id="@+id/textView2"
         style="@style/textMessage"
+        android:layout_width="363dp"
+        android:layout_height="168dp"
         android:text="@string/message_intro"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        app:layout_constraintVertical_bias="0.158" />
 
     <Button
         android:id="@+id/button"
         style="@style/buttonProceed"
-        android:layout_marginBottom="44dp"
-        android:onClick="nextPage"
+        android:layout_marginBottom="196dp"
+        android:onClick="proceedDrinksMenu"
         android:text="@string/string_proceed_drinks"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        style="@style/buttonProceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:onClick="proceedDessertsMenu"
+        android:text="@string/string_proceed_desserts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/button5"
+        style="@style/buttonProceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:onClick="proceedAdultsMenu"
+        android:text="@string/string_proceed_adults"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button6"
+        style="@style/buttonProceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="proceedKidsMenu"
+        android:text="@string/string_proceed_kids"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

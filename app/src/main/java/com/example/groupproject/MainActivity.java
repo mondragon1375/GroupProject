@@ -14,8 +14,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void nextPage(View v) {
+    public void proceedDrinksMenu(View v) {
         Intent intent = new Intent(this, DrinksMenuActivity.class);
         startActivity(intent);
+
     }
+    public void proceedAdultsMenu(View v) {
+        Intent intent = new Intent(this, AdultsMenuActivity.class);
+        startActivity(intent);
+    }
+
+    public void proceedDessertsMenu(View v) {
+        Intent intent = new Intent(this, DessertsMenuActivity.class);
+        startActivity(intent);
+    }
+
+    public void proceedKidsMenu(View v) {
+        Intent intent = new Intent(this, KidsMenuActivity.class);
+        startActivity(intent);
+    }
+
 }

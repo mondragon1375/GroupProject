@@ -133,8 +133,8 @@ public class DrinksMenuActivity extends AppCompatActivity {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
-    public void goToKidsMenu(View v) {
-        Intent intent = new Intent(this, KidsMenuActivity.class);
+    public void goHome(View v) {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 

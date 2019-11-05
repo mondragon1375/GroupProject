@@ -79,8 +79,8 @@ public class DessertsMenuActivity extends AppCompatActivity {
         listFoods.setOnItemClickListener(itemClickListener);
     }
 
-    public void goToBill(View v) {
-        Intent intent = new Intent(this, CalculateBillActivity.class);
+    public void goHome(View v) {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 

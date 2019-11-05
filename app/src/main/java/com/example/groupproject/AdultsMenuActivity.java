@@ -130,8 +130,8 @@ public class AdultsMenuActivity extends AppCompatActivity {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
-    public void goToDessertMenu(View v) {
-        Intent intent = new Intent(this, DessertsMenuActivity.class);
+    public void goHome(View v) {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }

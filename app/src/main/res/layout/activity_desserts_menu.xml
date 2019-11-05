@@ -48,8 +48,8 @@
         style="@style/buttonProceed"
         android:layout_width="140dp"
         android:layout_height="70dp"
-        android:text="Go to Bill"
-        android:onClick = "goToBill"
+        android:text="Go to home page"
+        android:onClick = "goHome"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

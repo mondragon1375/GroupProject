@@ -67,8 +67,8 @@
         style="@style/buttonProceed"
         android:layout_width="140dp"
         android:layout_height="70dp"
-        android:onClick="goToKidsMenu"
-        android:text="Proceed to\nKids Menu"
+        android:onClick="goHome"
+        android:text="Go to home page"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
