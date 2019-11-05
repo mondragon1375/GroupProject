@@ -15,12 +15,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class DrinksMenuActivity extends AppCompatActivity {
-
-    private static final String TAG = "MainActivity";
 
     DatabaseHelper mDatabaseHelper;
     private Button btnAdd, btnView;
@@ -51,7 +48,6 @@ public class DrinksMenuActivity extends AppCompatActivity {
                 new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> listFoods,
                                             View itemView, int position, long id) {
-                        DecimalFormat df = new DecimalFormat("#,###,##0.00");
                        // TextView fooditem = (TextView) findViewById(R.id.drink);
                        // TextView costofitem = (TextView) findViewById(R.id.cost);
 
@@ -62,8 +58,6 @@ public class DrinksMenuActivity extends AppCompatActivity {
                         int i = position;
                         drink[i] = Food.drinksFood[i].getFoodName();
                         cost[i] = Food.drinksFood[i].getPrice();
-
-                        String roundedValue = df.format(cost[i]);
 
                         String costString = Double.toString(cost[i]);
 
@@ -76,7 +70,7 @@ public class DrinksMenuActivity extends AppCompatActivity {
                         toast.show();
 
                         foodNameTextView.setText(drink[i]);
-                        foodCostTextView.setText("$ " + roundedValue);
+                        foodCostTextView.setText(costString);
                         // Pass the Food name the user clicks on to BreakfastChoicesActivity
                     }
                 };
@@ -91,8 +85,6 @@ public class DrinksMenuActivity extends AppCompatActivity {
         // Gets data the user entered
         String name = foodNameTextView.getText().toString();
         String cost = foodCostTextView.getText().toString();
-
-        Log.d(TAG, "onClickAddButton: " + name + ", " + cost);
 
         // Make sure that none of the fields are empty
         if (name.length()!= 0 && cost.length() != 0) {
@@ -138,4 +130,4 @@ public class DrinksMenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    }
+}

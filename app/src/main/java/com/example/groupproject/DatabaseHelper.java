@@ -5,27 +5,21 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    private static final String TAG = "DatabaseHelper";
-    private static final String DB_NAME = "bill";
-    private static final String TABLE_NAME = "run_table";
-    private static final String COL0 = "_id";
-    private static final String COL1 = "FOODNAME";
-    private static final String COL2 = "FOODCOST";
+    private static final String DATABASE_NAME = "bill.db";
+    private static final String TABLE_NAME = "bill_table";
+    private static final String COL_1 = "ID";
+    private static final String COL_2 = "FOODNAME";
+    private static final String COL_3 = "FOODCOST";
 
     public DatabaseHelper(Context context) {
-        super(context, DB_NAME, null, 1);
+        super(context, DATABASE_NAME, null, 1);
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
-        String createTable = "CREATE TABLE " + TABLE_NAME + " (" + COL0
-                + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COL1 + " TEXT, "
-                + COL2 + " TEXT); ";
-        Log.d(TAG, "onCreate: " + createTable);
-        db.execSQL(createTable);
+    public void onCreate(SQLiteDatabase db){
+        db.execSQL("create table " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, FOODNAME TEXT, FOODCOST TEXT)");
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -34,60 +28,34 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public boolean addData(String foodName, String foodCost) {
-        SQLiteDatabase db = this.getWritableDatabase();         // This will get an object tor the database
-        ContentValues contentValues = new ContentValues();      // This will help us write to the database
-        contentValues.put(COL1, foodName);
-        contentValues.put(COL2, foodCost);
-
-        // this will display info to help us in Logcat to see where we are
-        Log.d(TAG, "addData: Adding " + foodName + " " + foodCost + " to " + TABLE_NAME);
-
-        // insert value into table.  Returns -1 if not successful
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_2, foodName);
+        contentValues.put(COL_3, foodCost);
         long result = db.insert(TABLE_NAME, null, contentValues);
 
         if (result == -1)
-            return false;       // didn't insert correctly
+            return false;
         else
-            return true;        // successful add to table
+            return true;
     }
 
     public Cursor getData() {
         SQLiteDatabase db = this.getWritableDatabase();
-        String query = "SELECT * FROM " + TABLE_NAME;
-        Cursor data = db.rawQuery(query, null);
-        return data;
+        Cursor res = db.rawQuery("select * from " + TABLE_NAME, null);
+        return res;
     }
 
     public Cursor getItemID(String foodName) {
         SQLiteDatabase db = this.getWritableDatabase();
-        // query is essentially saying
-        // "select the id from the table where the name is equal to the name passed in"
-
-        String query = "SELECT " + COL0 + " FROM " + TABLE_NAME + " WHERE " + COL1 +
-                " = '" + foodName + "'";
-        // Note there are single quotes around the name variable inside of double quotes
-        Cursor data = db.rawQuery(query, null);
-        return  data;
+        Cursor res = db.rawQuery("select " + COL_1 + " from " + TABLE_NAME + " where " + COL_2 + " = '" + foodName + "'", null);
+        return  res;
     }
 
-    public void updateName(String newFoodName, int id, String oldFoodName) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        String query = "UPDATE " + TABLE_NAME + " SET " + COL1 +
-                " = '" + newFoodName + "' WHERE " + COL0 + " = '" + id + "'" +
-                " AND " + COL1 + " = '" + oldFoodName + "'";
 
-        Log.d(TAG, "updateName: query " + query);
-        Log.d(TAG, "updateName: Setting name to " + newFoodName);
-        db.execSQL(query);
-    }
-
-    public void deleteName(int id, String foodName) {
+    public Integer deleteName(String id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        String query = "DELETE FROM " + TABLE_NAME + " WHERE " +
-                COL0 + " = '" + id + "'" + " AND " + COL1 + " = '" + foodName + "'";
-        Log.d(TAG, "deleteName: query " + query);
-        Log.d(TAG, "deleteName: Deleting " + foodName + " from database");
-        db.execSQL(query);
+        return db.delete(TABLE_NAME, "ID = ?", new String[] {id});
     }
 
 }
