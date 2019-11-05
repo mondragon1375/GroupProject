@@ -15,6 +15,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class AdultsMenuActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
@@ -49,6 +51,7 @@ public class AdultsMenuActivity extends AppCompatActivity {
                 new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> listFoods,
                                             View itemView, int position, long id) {
+                        DecimalFormat df = new DecimalFormat("#,###,##0.00");
                        // EditText fooditem = (EditText) findViewById(R.id.adultsItem);
                         String[] adultFood = new String[10];
                         Double[] cost = new Double[10];
@@ -57,6 +60,8 @@ public class AdultsMenuActivity extends AppCompatActivity {
                         int i = position;
                         adultFood[i] = Food.adultsMenu[i].getFoodName();
                         cost[i] = Food.adultsMenu[i].getPrice();
+
+                        String roundedValue = df.format(cost[i]);
 
                         String costString = Double.toString(cost[i]);
 
@@ -71,7 +76,7 @@ public class AdultsMenuActivity extends AppCompatActivity {
                         // Pass the Food name the user clicks on to BreakfastChoicesActivity
 
                         foodNameTextView.setText(adultFood[i]);
-                        foodCostTextView.setText(costString);
+                        foodCostTextView.setText("$ " + roundedValue);
                     }
                 };
         // Assign the listener to the list view

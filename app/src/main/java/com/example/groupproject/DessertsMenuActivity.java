@@ -15,6 +15,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class DessertsMenuActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
@@ -48,6 +50,7 @@ public class DessertsMenuActivity extends AppCompatActivity {
                 new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> listFoods,
                                             View itemView, int position, long id) {
+                        DecimalFormat df = new DecimalFormat("#,###,##0.00");
                         TextView fooditem = (TextView) findViewById(R.id.dessertsItemName);
                         String[] dessertFood = new String[10];
                         Double[] cost = new Double[10];
@@ -56,6 +59,8 @@ public class DessertsMenuActivity extends AppCompatActivity {
                         int i = position;
                         dessertFood[i] = Food.dessertMenu[i].getFoodName();
                         cost[i] = Food.drinksFood[i].getPrice();
+
+                        String roundedValue = df.format(cost[i]);
 
                         String costString = Double.toString(cost[i]);
 
@@ -66,7 +71,7 @@ public class DessertsMenuActivity extends AppCompatActivity {
                         toast.show();
 
                         foodNameTextView.setText(dessertFood[i]);
-                        foodCostTextView.setText(costString);
+                        foodCostTextView.setText("$ " + roundedValue);
                         // Pass the Food name the user clicks on to BreakfastChoicesActivity
                     }
                 };
