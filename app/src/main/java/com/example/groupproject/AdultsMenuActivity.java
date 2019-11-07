@@ -51,10 +51,11 @@ public class AdultsMenuActivity extends AppCompatActivity {
                 new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> listFoods,
                                             View itemView, int position, long id) {
+
                         DecimalFormat df = new DecimalFormat("#,###,##0.00");
                        // EditText fooditem = (EditText) findViewById(R.id.adultsItem);
-                        String[] adultFood = new String[10];
-                        Double[] cost = new Double[10];
+                        String[] adultFood = new String[Food.adultsMenu.length];
+                        Double[] cost = new Double[Food.adultsMenu.length];
 
                         //for(int i = 0; i <= position; i++)
                         int i = position;

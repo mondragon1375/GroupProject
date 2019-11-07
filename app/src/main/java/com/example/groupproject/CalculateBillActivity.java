@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class CalculateBillActivity extends AppCompatActivity {
 
-    private static final String TAG = "ListRunDataActivity";
+    private static final String TAG = "CalculateBillActivity";
     DatabaseHelper mDatabaseHelper;
 
     private ListView mListView;
@@ -93,6 +93,7 @@ public class CalculateBillActivity extends AppCompatActivity {
                     Intent intent = new Intent(CalculateBillActivity.this, EditFoodItemActivity.class);
                     intent.putExtra(EditFoodItemActivity.ID, itemID);
                     intent.putExtra(EditFoodItemActivity.NAME, shortName);
+                    Log.d(TAG, "the method works");
                     startActivity(intent);
                 }
                 else {
