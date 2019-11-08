@@ -71,7 +71,7 @@ public class DessertsMenuActivity extends AppCompatActivity {
                         toast.show();
 
                         foodNameTextView.setText(dessertFood[i]);
-                        foodCostTextView.setText("$ " + roundedValue);
+                        foodCostTextView.setText(roundedValue);
                         // Pass the Food name the user clicks on to BreakfastChoicesActivity
                     }
                 };

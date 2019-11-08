@@ -17,8 +17,14 @@
 
     <ListView
         android:id="@+id/runListView"
-        android:layout_width="393dp"
-        android:layout_height="358dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="268dp" />
+
+    <TextView
+        android:id="@+id/totalCost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total cost of items" />
 
     <Button
         android:id="@+id/buttonNewRun"

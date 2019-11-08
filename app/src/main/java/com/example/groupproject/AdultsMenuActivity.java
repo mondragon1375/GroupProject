@@ -77,7 +77,7 @@ public class AdultsMenuActivity extends AppCompatActivity {
                         // Pass the Food name the user clicks on to BreakfastChoicesActivity
 
                         foodNameTextView.setText(adultFood[i]);
-                        foodCostTextView.setText("$ " + roundedValue);
+                        foodCostTextView.setText(roundedValue);
                     }
                 };
         // Assign the listener to the list view

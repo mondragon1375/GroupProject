@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class CalculateBillActivity extends AppCompatActivity {
@@ -22,6 +23,8 @@ public class CalculateBillActivity extends AppCompatActivity {
     DatabaseHelper mDatabaseHelper;
 
     private ListView mListView;
+    private TextView totalBill;
+    double itemCost = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,8 @@ public class CalculateBillActivity extends AppCompatActivity {
 
         // Gets reference to listview and DatabaseHelper
         mListView = (ListView) findViewById(R.id.runListView);
+
+        totalBill = (TextView) findViewById(R.id.totalCost);
         mDatabaseHelper = new DatabaseHelper(this);
 
         // calls method to fill values in the ListView
@@ -37,6 +42,7 @@ public class CalculateBillActivity extends AppCompatActivity {
     }
 
     private void populateListView() {
+        DecimalFormat df = new DecimalFormat("#,###,##0.00");
         Log.d(TAG, "populateListView: Displaying data in the Listview");
 
         // get the data and append to a list
@@ -53,6 +59,8 @@ public class CalculateBillActivity extends AppCompatActivity {
             // get the value from the database in column 1 (name) and the value in column 2 (dist)
             // then add it to the ArrayList
             runData.add(data.getString(1) + ", " + data.getString(2) + " dollars");     // Name of runner
+            itemCost += Double.parseDouble(data.getString(2));
+            totalBill.setText("The bill today is $ " + df.format(itemCost));
         }
 
         // Create the list adapter and set the adapter to this ArrayList
@@ -95,12 +103,14 @@ public class CalculateBillActivity extends AppCompatActivity {
                     intent.putExtra(EditFoodItemActivity.NAME, shortName);
                     Log.d(TAG, "the method works");
                     startActivity(intent);
+
                 }
                 else {
                     toastMessage("No ID associated with that name");
                 }
             }
         });
+
 
 
     }

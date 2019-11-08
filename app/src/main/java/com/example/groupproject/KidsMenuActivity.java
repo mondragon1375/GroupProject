@@ -73,7 +73,7 @@ public class KidsMenuActivity extends AppCompatActivity {
                         toast.show();
 
                         foodNameTextView.setText(kidsFood[i]);
-                        foodCostTextView.setText("$ " + roundedValue);
+                        foodCostTextView.setText(roundedValue);
                         // Pass the Food name the user clicks on to BreakfastChoicesActivity
                     }
                 };
